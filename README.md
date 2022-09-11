@@ -1,4 +1,4 @@
-# InstagramListDifferentiation
+# ListDifferentiation
 
 Outputs an array of elements from a list not present in another list. This program is also capable of extracting elements from a string given the regex.
 
