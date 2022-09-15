@@ -34,7 +34,6 @@ public class Main {
     			b = false;
     		}
     	}   	
-
     	String[] ans = new String[count];
     	boolean addToList = false;
     	int currInd = 0;
@@ -67,6 +66,21 @@ public class Main {
             list[currInd] = currUser;
             currInd++;
             list1 = list1.substring(list1.indexOf("'s profile picture") + 20 + currUser.length());
+        }
+        return list;
+    }
+	
+    public static String[] makeList(String list1, String regex) {
+        String[] list = new String[returnFreq(list1, regex)];
+        int currInd = 0;
+        while(list1.indexOf(regex) != -1) {
+            int i = list1.indexOf(regex);
+            String currUser = list1.substring(0, i);
+            if(currUser.lastIndexOf(" ") != -1) currUser = currUser.substring(currUser.lastIndexOf(" ") + 1, i);
+            
+            list[currInd] = currUser;
+            currInd++;
+            list1 = list1.substring(list1.indexOf(regex) + 20 + currUser.length());
         }
         return list;
     }
