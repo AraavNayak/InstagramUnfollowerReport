@@ -47,8 +47,8 @@ public class ListComparer {
 		}
 	}
 
-	public static ArrayList<String> notInOther(ArrayList<String> one, ArrayList<String> two) {
-		ArrayList<String> answer = new ArrayList<String>();
+	public static ArrayList<Object> notInOther(ArrayList<Object> one, ArrayList<Object> two) {
+		ArrayList<Object> answer = new ArrayList<Object>();
 		
 		for(int outer = 0; outer < one.size(); outer++) {
 			boolean found = false;
