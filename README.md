@@ -1,9 +1,12 @@
-# ListDifferentiation
+# InstagramListDifferentiation
 
-Outputs an array of elements from a list not present in another list. This program is also capable of extracting elements from a string given the regex.
+This program can be used to report unfollowers (people who have unfollowed you) since a certain date. This program utilizes IO to compare the contents of two txt files (one representing your followers from the past, the other containing your current followers) and report the list of people who were present in the old list but not present in the new list (AKA ppl who have unfollowed you).
 
+<code>Main.java</code> outputs an ArrayList of elements from a list not present in another list. 
 <br>
-<h3>Example Usage: </h3>
-Can be used to see a list of people who don't follow you back or people you don't follow back on Instagram.
-<h6>For the input, go to your Instagram profile, select your "followers" and highlight all of the users' profile pictures and their usernames and copy it. Open a new tab and paste, then copy everything in the search bar and paste it as the input for the first prompt of this program. Press 'Enter' and do the same with the list of people you are "following"</h6> 
+<code>obtainLists.js</code> details the Instagram API calls necessary to obtain the list of followers/following.
+
+
+<h3>Instructions</h3>
+<h6>Go to your Instagram profile, paste the content of <code>obtainLists.js</code> into the console and then enter copy(followers). Then open a txt file: (1) write the date on the first line, (2) paste (3) if you want to compare your current followers to previous followers, specify the path to each of the files in <code>Main.java</code> and run the program :D</h6>
 
