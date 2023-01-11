@@ -17,9 +17,7 @@ public class ListComparer {
 		ArrayList<String> currentFollowers = new ArrayList<>(), oldFollowers = new ArrayList<>();;
 		
 		try {
-			
 			Scanner reader = new Scanner(old);
-			
 			while(reader.hasNextLine()) {
 				
 				String s = reader.nextLine();
@@ -38,10 +36,8 @@ public class ListComparer {
 					} else currentFollowers.add(s.substring(0, s.indexOf(",")).trim());
 				}
 			}
-			
 			reader.close();
-			System.out.println("Usernames of ppl that have unfollowed you since \'" + new Scanner(new File(oldSrc)).nextLine() + "\'\n" + notInOther(oldFollowers, currentFollowers));
-					
+			System.out.println("Usernames of ppl that have unfollowed you since \'" + new Scanner(new File(oldSrc)).nextLine() + "\'\n" + notInOther(oldFollowers, currentFollowers));	
 		} catch(Exception e) {
 			System.out.println(e.getClass() + ": " + e.getMessage());
 		}
@@ -62,6 +58,5 @@ public class ListComparer {
 			}
 		}
 		return answer;
-	}
-		
+	}		
 }
