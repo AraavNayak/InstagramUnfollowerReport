@@ -4,7 +4,7 @@ This program can be used to report unfollowers (people who have unfollowed you) 
 
 <code>ListComparer.java</code> outputs an ArrayList of elements from a list not present in another list. 
 <br>
-<code>obtainLists.js</code> details the Instagram API code necessary to obtain the list of followers/following.
+<code>obtainLists.js</code> details the Instagram API code necessary to obtain the list of followers/following of a user from the javascript console on Instagram.
 
 
 <h3>Instructions</h3>
