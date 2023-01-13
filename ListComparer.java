@@ -37,7 +37,9 @@ public class ListComparer {
 				}
 			}
 			reader.close();
-			System.out.println("Usernames of ppl that have unfollowed you since \'" + new Scanner(new File(oldSrc)).nextLine() + "\'\n" + notInOther(oldFollowers, currentFollowers));	
+			System.out.println("Usernames of ppl that have unfollowed you since \'" + new Scanner(new File(oldSrc)).nextLine() + "\'\n" + notInOther(oldFollowers, currentFollowers));
+			System.out.println();
+			System.out.println("Usernames of ppl that have followed you since \'" + new Scanner(new File(oldSrc)).nextLine() + "\'\n" + notInOther(currentFollowers, oldFollowers));
 		} catch(Exception e) {
 			System.out.println(e.getClass() + ": " + e.getMessage());
 		}
