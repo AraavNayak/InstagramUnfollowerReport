@@ -15,7 +15,7 @@ iDontFollowBack = [];
 
 (async () => {
   try {
-    console.log(`Process started! Give it a couple of seconds`);
+    console.log(`Process started! Give it a couple seconds`);
 
     const userQueryRes = await fetch(
       `https://www.instagram.com/web/search/topsearch/?query=${username}`
@@ -102,7 +102,7 @@ iDontFollowBack = [];
     console.log({ iDontFollowBack });
 
     console.log(
-      `Process is done: Type 'copy(followers)' or 'copy(followings)' or 'copy(dontFollowBack)' in the console and paste it into a text editor to take a look at it'`
+      `Done! Enter 'copy(followers)' or 'copy(followings)' or 'copy(dontFollowBack)' or 'copy(iDontFollowBack)' in the console and paste it into a txt file to take a look at it'`
     );
   } catch (err) {
     console.log({ err });
