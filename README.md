@@ -8,6 +8,6 @@ This program can be used to report unfollowers (people who have unfollowed you) 
 
 
 <h3>Instructions</h3>
-<h6>Go to your Instagram profile, paste and enter the content of <code>obtainLists.js</code> into the console and then enter copy(followers). Then open a txt file: (1) write the date on the first line, (2) paste (3) if you want to compare your current followers to previous followers, specify the path to each of the files in <code>ListComparer.java</code> and run the program (4) Follow my insta/github for more! :D</h6>
+<h6>Go to your Instagram profile, first change the username in <code>obtainLists.js</code> to the username of the account you want to run this program on, and then paste and enter the content of <code>obtainLists.js</code> into the console and then enter copy(followers). Then open a txt file: (1) write the date on the first line, (2) paste (3) if you want to compare your current followers to previous followers, specify the path to each of the files in <code>ListComparer.java</code> and run the program (4) Follow my insta/github for more! :D</h6>
 <br></br>
 <u>More on the Instagram API: </u><a>https://stackoverflow.com/questions/32407851/instagram-api-how-can-i-retrieve-the-list-of-people-a-user-is-following-on-ins?answertab=scoredesc#tab-top</a>
