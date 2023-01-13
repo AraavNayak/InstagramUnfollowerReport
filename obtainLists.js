@@ -1,12 +1,12 @@
-const username = "USERNAME_HERE";
+const username = "USERNAME";
 
 /**
  * Initialized like this so typescript can infer the type
  */
-let followers = [{ username: "", full_name: "" }];
-let followings = [{ username: ""}];
-let dontFollowMeBack = [{ username: "", full_name: "" }];
-let iDontFollowBack = [{ username: "", full_name: "" }];
+let followers = [];
+let followings = [];
+let dontFollowMeBack = [];
+let iDontFollowBack = [];
 
 followers = [];
 followings = [];
@@ -15,6 +15,7 @@ iDontFollowBack = [];
 
 (async () => {
   try {
+    console.log(`Process started! Give it a couple of seconds`);
 
     const userQueryRes = await fetch(
       `https://www.instagram.com/web/search/topsearch/?query=${username}`
@@ -76,9 +77,7 @@ iDontFollowBack = [];
           after = res.data.user.edge_follow.page_info.end_cursor;
           followings = followings.concat(
             res.data.user.edge_follow.edges.map(({ node }) => {
-              return {
-                username: node.username,
-              };
+              return node.username;
             })
           );
         });
@@ -88,7 +87,7 @@ iDontFollowBack = [];
 
     dontFollowMeBack = followings.filter((following) => {
       return !followers.find(
-        (follower) => follower.username === following.username
+        (follower) => follower === following
       );
     });
 
@@ -96,7 +95,7 @@ iDontFollowBack = [];
 
     iDontFollowBack = followers.filter((follower) => {
       return !followings.find(
-        (following) => following.username === follower.username
+        (following) => following === follower
       );
     });
 
