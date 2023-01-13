@@ -1,8 +1,5 @@
 const username = "USERNAME_HERE";
 
-/**
- * Initialized like this so typescript can infer the type
- */
 let followers = [];
 let followings = [];
 let dontFollowMeBack = [];
@@ -16,15 +13,11 @@ iDontFollowBack = [];
 (async () => {
   try {
     console.log(`Process started! Give it a couple seconds`);
-
     const userQueryRes = await fetch(
       `https://www.instagram.com/web/search/topsearch/?query=${username}`
     );
-
     const userQueryJson = await userQueryRes.json();
-
     const userId = userQueryJson.users[0].user.pk;
-
     let after = null;
     let has_next = true;
 
@@ -52,9 +45,7 @@ iDontFollowBack = [];
           );
         });
     }
-
     console.log({ followers });
-
     after = null;
     has_next = true;
 
@@ -82,7 +73,6 @@ iDontFollowBack = [];
           );
         });
     }
-
     console.log({ followings });
 
     dontFollowMeBack = followings.filter((following) => {
@@ -90,7 +80,6 @@ iDontFollowBack = [];
         (follower) => follower === following
       );
     });
-
     console.log({ dontFollowMeBack });
 
     iDontFollowBack = followers.filter((follower) => {
@@ -98,9 +87,7 @@ iDontFollowBack = [];
         (following) => following === follower
       );
     });
-
     console.log({ iDontFollowBack });
-
     console.log(
       `Done! Enter 'copy(followers)' or 'copy(followings)' or 'copy(dontFollowBack)' or 'copy(iDontFollowBack)' in the console and paste it into a txt file to take a look at it'`
     );
