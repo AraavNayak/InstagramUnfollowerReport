@@ -1,4 +1,4 @@
-# InstagramListDifferentiation
+# InstagramUnfollowerReport
 
 This program can be used to report unfollowers (people who have unfollowed you) since a certain date. This program is also capable of reporting people who you don't follow back and people who don't follow you back on Instagram. This program utilizes IO to compare the contents of two txt files (one representing your followers from the past, the other containing your current followers) and report the list of people who were present in the old list but not present in the new list (AKA ppl who have unfollowed you).
 
