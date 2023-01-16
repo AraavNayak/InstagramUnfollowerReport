@@ -1,17 +1,10 @@
-const username = "araavnayak";
+const username = "USERNAME_HERE";
 
-/**
- * Initialized like this so typescript can infer the type
- */
 let followers = [];
 let followings = [];
-let dontFollowMeBack = [];
-let iDontFollowBack = [];
 
 followers = [];
 followings = [];
-dontFollowMeBack = [];
-iDontFollowBack = [];
 
 (async () => {
   try {
@@ -53,57 +46,7 @@ iDontFollowBack = [];
         });
     }
 
-    console.log({ followers });
-
-    after = null;
-    has_next = true;
-
-    while (has_next) {
-      await fetch(
-        `https://www.instagram.com/graphql/query/?query_hash=d04b0a864b4b54837c0d870b0e77e076&variables=` +
-          encodeURIComponent(
-            JSON.stringify({
-              id: userId,
-              include_reel: true,
-              fetch_mutual: true,
-              first: 50,
-              after: after,
-            })
-          )
-      )
-        .then((res) => res.json())
-        .then((res) => {
-          has_next = res.data.user.edge_follow.page_info.has_next_page;
-          after = res.data.user.edge_follow.page_info.end_cursor;
-          followings = followings.concat(
-            res.data.user.edge_follow.edges.map(({ node }) => {
-              return node.username;
-            })
-          );
-        });
-    }
-
-    console.log({ followings });
-
-    dontFollowMeBack = followings.filter((following) => {
-      return !followers.find(
-        (follower) => follower === following
-      );
-    });
-
-    console.log({ dontFollowMeBack });
-
-    iDontFollowBack = followers.filter((follower) => {
-      return !followings.find(
-        (following) => following === follower
-      );
-    });
-
-    console.log({ iDontFollowBack });
-
-    console.log(
-      `Process is done: Type 'copy(followers)' or 'copy(followings)' or 'copy(dontFollowBack)' in the console and paste it into a text editor to take a look at it'`
-    );
+    console.log(followers.length);
   } catch (err) {
     console.log({ err });
   }
