@@ -54,4 +54,16 @@ public class ListComparer {
 		}
 		return answer;
 	}		
+	
+	//returns an ArrayList of txt files in the specified directory
+	public static void getTXTFiles() {
+		File dir = new File(/*PATHNAME HERE*/);
+		String[] fileNames = dir.list();
+		ArrayList<String> txtFiles = new ArrayList<>();
+	
+		for(String fileName : fileNames) {
+			if(fileName.indexOf(".txt") != -1) txtFiles.add(fileName);
+		}
+		System.out.println(txtFiles);
+	}
 }
