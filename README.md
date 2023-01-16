@@ -4,8 +4,9 @@ This program can be used to report unfollowers (people who have unfollowed you) 
 
 <code>ListComparer.java</code> outputs an ArrayList of elements from a list not present in another list. 
 <br>
-<code>obtainLists.js</code> details the Instagram API code necessary to obtain the list of followers/following of a user from the javascript console on Instagram.
-
+<code>obtainLists.js</code> details the Instagram API code necessary to obtain the list of followers/following of a user from the javascript console on instagram.com
+<br>
+<code>trueCount.js</code> details the code (to be pasted in Instagram.com console) to obtain the true count of followers or following of the specified user
 
 <h3>Instructions</h3>
 <h6>First change the username in <code>obtainLists.js</code> to the username of the account you want to run this program on, and then go to Instagram and paste and enter the content of <code>obtainLists.js</code> into the console and then enter copy(followers). Then open a txt file: (1) write the date on the first line, (2) paste (3) if you want to compare your current followers to previous followers, specify the path to each of the txt files in <code>ListComparer.java</code> and run the program (4) Follow my insta/github for more! :D</h6>
