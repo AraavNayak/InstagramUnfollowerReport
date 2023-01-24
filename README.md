@@ -2,11 +2,11 @@
 
 This program can be used to report unfollowers (people who have unfollowed you) since a certain date. This program is also capable of reporting people who you don't follow back and people who don't follow you back on Instagram. This program utilizes IO to compare the contents of two txt files (one representing your followers from the past, the other containing your current followers) and report the list of people who were present in the old list but not present in the new list (AKA ppl who have unfollowed you).
 
-<code>ListComparer.java</code> outputs an ArrayList of elements from a list not present in another list. 
+<code>ListComparer.java</code> outputs an ArrayList of elements from a list not present in another list; this can be used to tell you people who have unfollowed you or people you have unfollowed from a certain time. 
 <br>
-<code>obtainLists.js</code> details the Instagram API code necessary to obtain the list of followers/following of a user from the javascript console on instagram.com
+<code>obtainLists.js</code> details the Instagram API code necessary to obtain the list of followers/following of a user from the javascript console on instagram.com. This can be used to obtain the lists of followers, followings, as well as lists of people who you don't follow back and people who don't follow you back.
 <br>
-<code>trueCount.js</code> details the code (to be pasted in Instagram.com console) to obtain the actual count of followers or following of the specified user
+<code>trueCount.js</code> details the code (to be pasted in Instagram.com console) to obtain the actual count of followers of the specified user. Instagram sometimes doesn't show an accurate follower count, so this can be used to give you that accurate reading of how many followers the specified user has
 
 <h3>Instructions</h3>
 <h6>First change the username in <code>obtainLists.js</code> to the username of the account you want to run this program on, and then go to Instagram and paste and enter the content of <code>obtainLists.js</code> into the console and then enter copy(followers). Then open a txt file: (1) write the date on the first line, (2) paste (3) if you want to compare your current followers to previous followers, specify the path to each of the txt files in <code>ListComparer.java</code> and run the program (4) Follow my insta/github for more! :D</h6>
