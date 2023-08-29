@@ -7,7 +7,7 @@ for(var i = 0; i < elements.length; i++) {
 	elements[i].click();
 }
 
-const id = setInterval(chooseButton, 100);
+const id = setInterval(chooseButton, 500);
 
 function chooseButton() {
    setTimeout(() => { myMethod(); }, 500);
