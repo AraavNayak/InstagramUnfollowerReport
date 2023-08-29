@@ -21,10 +21,10 @@ function myMethod() {
     	var currUsername = str.substring(10, str.length-1);
     	if(isInArray(currUsername)) {
             var btn = document.getElementsByClassName("_a9-- _a9-_");
+	    console.log("Unfollowed");
             btn[btn.length-1].click();
         } else {
             var btn = document.getElementsByClassName("_a9-- _a9_1");
-            console.log(str);
             btn[btn.length-1].click();
         }
     } catch(error) {
